@@ -1,68 +1,109 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-CSR-Template
 
-## Available Scripts
+This is a React based client side rendering boilerplate.
 
-In the project directory, you can run:
+In client side rendering (CSR), you are completely running ReactJS on the browser. The initial HTML rendered by the server is a placeholder and the entire UI is rendered in the browser once all your scripts load.
 
-### `yarn start`
+## Advantages of CSR
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **No Full Page Reload Required**: Client-side rendering avoids making unnecessary requests for a full page when only a portion of the page has changed. This is especially helpful in a world that’s increasingly browsing via mobile networks with high latency. It makes sure fast website rendering after the initial load.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **Lazy Loading**: Client-side rendering supports lazy loading sections of your application to save bandwidth & speed initial load. For example, you can load additional records, images, and ads as the user scrolls down, or as the user changes their search parameters, all without performing a full post-back.
 
-### `yarn test`
+- **Rich Interactions**: Client-side rendering supports rich, animated interactions, transformations, and transitions. Fade a row out on delete, or fade a dialog into view.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Easy Deployments**: Static files are easy to deploy. You don’t necessarily need to perform a monolithic build to generate new binaries when a small change occurs.
 
-### `yarn build`
+## When you should not consider CSR
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- If high SEO (Search engine optimisation) is essential to increase the visibility of the web application to the users of a search engine.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- If you need faster initial loading. Then CSR is not recommended. Server side rendering could be a wise approach.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demo
 
-### `yarn eject`
+This boilerplate code has been developed on top of create-react-app template.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To know more about create-react-app, follow the documentation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[create-react-app documentation](https://github.com/facebook/create-react-app#readme)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[To see the demo of this template, click here](https://react-csr-template-app.herokuapp.com)
 
-## Learn More
+## Primary Tech stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React**: The primary UI library
+- **Redux**: Redux data flow
+- **React-redux**: Integrating React with Redux data flow
+- **Redux-thunk**: Redux middleware to support asynchronous operations
+- **Redux-persist**: Persist and rehydrate a redux store.
+- **Redux-pack**: Redux library to extend various stages (start, success, error, finish, always) of API calling
+- **React-loadable**: Code splitting
+- **SASS**: CSS pre-processor
+- **Axios**: Javascript library to make rest API call
+- **React-helmet**: React library to change header metadata and title
+- **Node-sass**: SASS CSS pre-processor
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features of this template
 
-### Code Splitting
+- Complete UI architecture
+- Centralised API interceptor
+- Progressive web app (PWA)
+- Offline support with service worker
+- Code splitting with react-loadable
+- Redux data flow
+- React hooks
+- Hot reloading for local development
+- React memo to stop redundant rendition
+- Error boundary to catch unexpected UI errors
+- Modular and functional programming paradigm used
+- Common and extensible config
+- Integrated EsLint
+- Integrated CSS pre-processor
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## How to run this template
 
-### Analyzing the Bundle Size
+First clone project and install dependencies
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```sh
+$ mkdir ProjectName && cd ProjectName
+$ git clone https://github.com/amit040386/react-csr-template
+$ cd react-csr-template
+$ npm install
+```
 
-### Making a Progressive Web App
+Navigate to [News API](https://newsapi.org/) and grab your API key.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Find config/default.js in root folder and update API Key.
 
-### Advanced Configuration
+```javascript
+{
+  API_KEY: 'enter-your-api-key';
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+To run on local
 
-### Deployment
+```sh
+$ npm start
+```
+Default port number will be 3000 but if that not available then it will automatically take a unique port number and the application will be opened in the browser
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+To change the port, create a .env in root folder and add your desired port number. E.g.
 
-### `yarn build` fails to minify
+```javascript
+PORT=4566
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Deployment
+
+Deployment build
+
+```sh
+$ npm run build
+```
+
+You can deploy this project to:
+
+[Heroku](https://www.heroku.com/)

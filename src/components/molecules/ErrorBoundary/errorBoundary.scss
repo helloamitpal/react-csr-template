@@ -1,0 +1,15 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 1.5em;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+}

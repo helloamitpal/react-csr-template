@@ -1,0 +1,36 @@
+{
+  "extends": ["airbnb", "react-app"],
+  "plugins": ["react-hooks"],
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": ["off"],
+    "no-prototype-builtins": ["off"],
+    "arrow-body-style": ["off"],
+    "no-confusing-arrow": ["off"],
+    "no-script-url": ["off"],
+    "no-underscore-dangle": ["off"],
+    "prefer-promise-reject-errors": ["off"],
+    "import/no-named-default": ["off"],
+    "jsx-a11y/no-noninteractive-element-interactions": ["off"],
+    "jsx-a11y/no-static-element-interactions": ["off"],
+    "jsx-a11y/anchor-is-valid": ["off"],
+    "import/prefer-default-export": ["off"],
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "arrow-parens": ["off"],
+    "react/jsx-fragments": ["off"],
+
+    "react/require-default-props": ["error"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/href-no-hash": [0],
+    "max-len": ["error", { "code": 200 }],
+    "function-paren-newline": ["error", "consistent"],
+    "comma-dangle": ["error", "never"],
+    "no-unused-vars": ["error"],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
+    "object-curly-newline": ["error", { "consistent": true }],
+    "jsx-a11y/label-has-for": ["error", { "required": { "every": ["id"] }, "allowChildren": true }],
+    "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }]
+  }
+}

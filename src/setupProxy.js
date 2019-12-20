@@ -2,7 +2,7 @@ const proxy = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    '/api',
+    '/top-headlines',
     proxy({
       target: 'https://newsapi.org/v2',
       changeOrigin: true,

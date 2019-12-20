@@ -2,7 +2,7 @@
   "root": "build/",
   "proxies": {
     "/top-headlines": {
-      "Origin": "${API_URL}"
+      "origin": "${API_URL}"
     }
   }
 }

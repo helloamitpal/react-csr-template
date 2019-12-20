@@ -1,0 +1,38 @@
+@import '../../../styles/colors.scss';
+
+.message-container {
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+
+  .title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  .description {
+    font-size: 0.8em;
+  }
+
+  &.success {
+    background-color: $success-background-color;
+    box-shadow: 0px 0px 5px 0px $success-box-shadow-color;
+  }
+
+  &.error {
+    background-color: $error-background-color;
+    box-shadow: 0px 0px 5px 0px $error-box-shadow-color;
+  }
+
+  &.default {
+    background-color: $default-background-color;
+    box-shadow: 0px 0px 5px 0px $default-box-shadow-color;
+  }
+
+  &.warning {
+    background-color: $warning-background-color;
+    box-shadow: 0px 0px 5px 0px $warning-box-shadow-color;
+  }
+}

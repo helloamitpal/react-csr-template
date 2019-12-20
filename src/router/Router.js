@@ -9,8 +9,6 @@ import ArticleDetailsModule from '../modules/Article/Details/Loadable';
 import Header from '../components/molecules/Header';
 import Footer from '../components/molecules/Footer';
 
-import './Router.scss';
-
 const Router = () => {
   return (
     <div className="app-container">

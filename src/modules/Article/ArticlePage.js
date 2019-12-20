@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import * as articleActionCreator from './articleActionCreator';
+import LoadingIndicator from '../../components/atoms/LoadingIndicator';
+import Message from '../../components/atoms/Message';
 import config from '../../config';
 
 const ArticlePage = ({
@@ -66,6 +68,8 @@ const ArticlePage = ({
   return (
     <div className="article-page-container">
       {head()}
+      {loading && <LoadingIndicator />}
+      {!loading && error && <Message type="error" title="Oops!" description={error} />}
       <div className="row">
         <div className="section">
           <h3>{category || 'Popular Articles'}</h3>

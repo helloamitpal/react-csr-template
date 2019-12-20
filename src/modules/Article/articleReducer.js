@@ -28,10 +28,15 @@ const articleReducer = (state = initialState, action = '') => {
           error: '',
           loading: true
         }),
-        success: prevState => ({
-          ...prevState,
-          articles: [...payload.articles]
-        }),
+        success: prevState => {
+          if (payload.articles) {
+            return {
+              ...prevState,
+              articles: [...payload.articles]
+            };
+          }
+          return failureMessage(prevState);
+        },
         failure: prevState => failureMessage(prevState, payload),
         finish: prevState => ({
           ...prevState,

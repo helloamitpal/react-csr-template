@@ -3,17 +3,18 @@ import axios from 'axios';
 import config from '../config';
 
 // creating axios instance
-const axiosInstance = axios.create({
-  // baseURL: config.API_BASE_URL
-});
+const axiosConfig = (process.env.NODE_ENV !== 'production') ? {} :  {
+  baseURL: config.API_BASE_URL
+};
+const axiosInstance = axios.create(axiosConfig);
 
 // adding common headers
 axiosInstance.defaults.headers.post['Content-Type'] = 'application/json';
 axiosInstance.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 // Add a request interceptor
-axios.interceptors.request.use((axiosConfig) => {
-  return config;
+axios.interceptors.request.use((tempConfig) => {
+  return tempConfig;
 }, (error) => {
   // Do something with request error
   return Promise.reject(error);

@@ -4,7 +4,7 @@ import config from '../config';
 
 // creating axios instance
 const axiosInstance = axios.create({
-  baseURL: config.API_BASE_URL
+  // baseURL: config.API_BASE_URL
 });
 
 // adding common headers

@@ -5,7 +5,7 @@ module.exports = function(app) {
     '/top-headlines',
     proxy({
       target: 'https://newsapi.org/v2',
-      changeOrigin: true,
+      changeOrigin: true
     })
   );
 };

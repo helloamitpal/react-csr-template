@@ -124,3 +124,7 @@ $ git commit -m "Start deploying create-react-app in heroku"
 $ git push heroku master
 $ heroku open
 ```
+
+## License
+
+This project is licensed under the MIT license, Copyright (c) 2019 Amit Pal. For more information see LICENSE.md.

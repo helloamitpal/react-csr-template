@@ -22,6 +22,23 @@ const middlewares = [
   reduxPackMiddleware
 ];
 
+let composeEnhancers;
+
+if (process.env.NODE_ENV !== 'production' && typeof window === 'object') {
+  if (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
+    composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({});
+  }
+
+
+  // NOTE: Uncomment the code below to restore support for Redux Saga
+  // Dev Tools once it supports redux-saga version 1.x.x
+  // if (window.__SAGA_MONITOR_EXTENSION__) {
+  //   reduxSagaMonitorOptions = {
+  //     sagaMonitor: window.__SAGA_MONITOR_EXTENSION__,
+  //   };
+  // }
+}
+
 const storeEnhancers = [
   applyMiddleware(...middlewares)
 ];

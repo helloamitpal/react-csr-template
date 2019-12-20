@@ -67,6 +67,7 @@ To know more about create-react-app, follow the documentation.
 - CSS pre-processor
 - Centralised color variables
 - Test case setup with Jest
+- Redux extension for better local debugging
 
 ## How to run this template
 

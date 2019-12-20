@@ -28,7 +28,7 @@ To know more about create-react-app, follow the documentation.
 
 [create-react-app documentation](https://github.com/facebook/create-react-app#readme)
 
-[To see the demo of this template, click here](https://react-csr-template-app.herokuapp.com)
+[To see the demo of this template, click here](https://react-csr-template.herokuapp.com)
 
 ## Primary Tech stack
 
@@ -106,3 +106,13 @@ $ npm run build
 You can deploy this project to:
 
 [Heroku](https://www.heroku.com/)
+
+Steps to follow:
+
+```sh
+$ heroku create $APP_NAME --buildpack mars/create-react-app
+$ git add .
+$ git commit -m "Start deploying create-react-app in heroku"
+$ git push heroku master
+$ heroku open
+```

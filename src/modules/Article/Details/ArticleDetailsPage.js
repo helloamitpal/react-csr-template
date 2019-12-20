@@ -16,7 +16,7 @@ const ArticleDetailsPage = ({ history, location: { state, pathname } }) => {
       <meta name="robots" content="index, follow" />
       <link
         rel="canonical"
-        href={`https://react-csr-template-app.herokuapp.com${pathname || ''}`}
+        href={`https://react-csr-template.herokuapp.com${pathname || ''}`}
       />
     </Helmet>
   );

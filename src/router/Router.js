@@ -17,7 +17,7 @@ const Router = () => {
       <Header />
       <div className="body-container container">
         <Switch>
-          <Route exact path={config.ARTICLE_PAGE} render={(props) => <ArticleModule {...props} />} />
+          <Route exact path={[config.ARTICLE_PAGE, config.SPEICIFIC_ARTICLE_PAGE]} render={(props) => <ArticleModule {...props} />} />
           <Route exact path={config.ARTICLE_DETAILS_PAGE} render={(props) => <ArticleDetailsModule {...props} />} />
           <Route path="" render={(props) => <NotFoundModule {...props} />} />
         </Switch>

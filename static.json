@@ -1,0 +1,8 @@
+{
+  "root": "build/",
+  "proxies": {
+    "/top-headlines": {
+      "Origin": "${API_URL}"
+    }
+  }
+}

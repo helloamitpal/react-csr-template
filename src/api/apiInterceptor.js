@@ -2,11 +2,7 @@ import axios from 'axios';
 
 import config from '../config';
 
-// creating axios instance
-const axiosConfig = (process.env.NODE_ENV !== 'production') ? {} :  {
-  baseURL: config.API_BASE_URL
-};
-const axiosInstance = axios.create(axiosConfig);
+const axiosInstance = axios.create({});
 
 // adding common headers
 axiosInstance.defaults.headers.post['Content-Type'] = 'application/json';

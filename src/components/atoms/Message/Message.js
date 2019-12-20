@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import './message.scss';
@@ -21,4 +21,4 @@ Message.defaultProps = {
   type: 'default'
 };
 
-export default Message;
+export default memo(Message);

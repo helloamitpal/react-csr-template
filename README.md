@@ -39,10 +39,13 @@ To know more about create-react-app, follow the documentation.
 - **Redux-persist**: Persist and rehydrate a redux store.
 - **Redux-pack**: Redux library to extend various stages (start, success, error, finish, always) of API calling
 - **React-loadable**: Code splitting
+- **React-router-dom**: SPA routing
 - **SASS**: CSS pre-processor
 - **Axios**: Javascript library to make rest API call
 - **React-helmet**: React library to change header metadata and title
 - **Node-sass**: SASS CSS pre-processor
+- **Jest**: Testing framework and test runner for unit test cases
+- **Enzyme**: React component testing utility
 
 ## Features of this template
 
@@ -58,8 +61,9 @@ To know more about create-react-app, follow the documentation.
 - Error boundary to catch unexpected UI errors
 - Modular and functional programming paradigm used
 - Common and extensible config
-- Integrated EsLint
-- Integrated CSS pre-processor
+- EsLint
+- CSS pre-processor
+- Test case setup with Jest
 
 ## How to run this template
 

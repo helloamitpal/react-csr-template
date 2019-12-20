@@ -4,7 +4,7 @@ This is a React based client side rendering boilerplate.
 
 In client side rendering (CSR), you are completely running ReactJS on the browser. The initial HTML rendered by the server is a placeholder and the entire UI is rendered in the browser once all your scripts load.
 
-[Github page] (https://amit040386.github.io/react-csr-template/)
+[Github page](https://amit040386.github.io/react-csr-template/)
 
 ## Advantages of CSR
 

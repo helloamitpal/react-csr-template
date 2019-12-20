@@ -24,7 +24,6 @@ In client side rendering (CSR), you are completely running ReactJS on the browse
 
 This boilerplate code has been developed on top of create-react-app template.
 
-
 To know more about create-react-app, follow the documentation.
 
 [create-react-app documentation](https://github.com/facebook/create-react-app#readme)

@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import Router from './router/Router';
-import configureStore from './configureStores';
+import configureStore from './store/configureStores';
 import config from './config';
 
 class AppRootContainer extends Component {

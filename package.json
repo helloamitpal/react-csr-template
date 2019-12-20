@@ -43,7 +43,7 @@
     "moduleNameMapper": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
     },
-    "testRegex": "_test_/.*.(js|jsx)$",
+    "testRegex": "__test__/.*.spec.(js|jsx)$",
     "setupFiles": [
       "./test/jestsetup.js"
     ],
@@ -60,7 +60,7 @@
       "src/config",
       "src/styles",
       "test/jest",
-      "test/__mocks__"
+      "test/__mock_data__"
     ],
     "testEnvironment": "jsdom",
     "globals": {

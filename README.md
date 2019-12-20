@@ -52,19 +52,20 @@ To know more about create-react-app, follow the documentation.
 ## Features of this template
 
 - Complete UI architecture
-- Centralised API interceptor
+- Centralised HTTP(S) request and response interceptor
 - Progressive web app (PWA)
 - Offline support with service worker
 - Code splitting with react-loadable
 - Redux data flow
 - React hooks
-- Hot reloading for local development
+- Hot module reloading (HMR) for local development
 - React memo to stop redundant rendition
 - Error boundary to catch unexpected UI errors
 - Modular and functional programming paradigm used
 - Common and extensible config
 - EsLint
 - CSS pre-processor
+- Centralised color variables
 - Test case setup with Jest
 
 ## How to run this template

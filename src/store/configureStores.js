@@ -5,9 +5,9 @@ import storage from 'redux-persist/lib/storage';
 import autoMergeLevel1 from 'redux-persist/es/stateReconciler/autoMergeLevel1';
 import { default as reduxThunk } from 'redux-thunk';
 
-import rootReducer from './rootReducer';
-import api from './api/apiInterceptor';
-import config from './config';
+import rootReducer from '../reducer/rootReducer';
+import api from '../api/apiInterceptor';
+import config from '../config';
 
 const persistConfig = {
   key: config.STORAGE_KEY,

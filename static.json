@@ -5,7 +5,7 @@
   },
   "proxies": {
     "/top-headlines/": {
-      "origin": "https://newsapi.org/v2/top-headlines"
+      "origin": "https://newsapi.org/v2/top-headlines/"
     }
   }
 }

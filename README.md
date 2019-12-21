@@ -68,8 +68,9 @@ To know more about create-react-app, follow the documentation.
 - Centralised color variables
 - Test case setup with Jest
 - Redux extension for better local debugging
+- Proxy setup to counter CORS issues if any
 
-## How to run this template
+## Quick start: How to run this template
 
 First clone project and install dependencies
 
@@ -86,7 +87,7 @@ Find config/default.js in root folder and update API Key.
 
 ```javascript
 {
-  API_KEY: 'enter-your-api-key';
+  API_KEY: 'enter-your-api-key'
 }
 ```
 
@@ -97,7 +98,7 @@ $ npm start
 ```
 Default port number will be 3000 but if that not available then it will automatically take a unique port number and the application will be opened in the browser
 
-To change the port, create a .env in root folder and add your desired port number. E.g.
+To change the port, create a .env in root folder and add your port number as follows.
 
 ```javascript
 PORT=4566
@@ -124,6 +125,30 @@ $ git commit -m "Start deploying create-react-app in heroku"
 $ git push heroku master
 $ heroku open
 ```
+
+You can do all these from Heroku dashboard as well.
+
+## Setting up proxy in Heroku deployment, if required
+
+Setting up proxy is required when an API call is made to a different domain. For example, your app is deployed in Heroku domain and you are trying to call the API from https://myexample.abc.com domain. Then the CORS issue would surface to block the response. To counter that CORS issue, proxy setup is required.
+
+These are the steps to be followed while setting up the proxy for the Heroku deployment.
+
+1. Go to Heroku dashboard. Click on settings tab and add this buildpack https://github.com/heroku/heroku-buildpack-static.git
+
+2. There is a file named, static.json file in the root folder. Change the route and origin url as per your requirement.
+
+3. In package.json file, "proxy" property has already been added. This is required for the local development. Please change the proxy url accordingly.
+
+4. Comment out the baseURL property of axios instance in /src/api/apiinterceptor.js file. Though it has already been commented out in this template. This is necessary to make it work.
+
+## What if I don't need this proxy setup
+
+If you don't need proxy setup then make a couple of changes in the template as mentioned below.
+
+- Delete static.json file from the root folder
+- Remove "proxy" property from package.json file, located in the root folder.
+- Uncomment the baseURL property while creating the axios instance in /src/api/apiinterceptor.js file.
 
 ## License
 

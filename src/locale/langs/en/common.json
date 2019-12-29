@@ -1,0 +1,14 @@
+{
+  "appName": "Article",
+  "menu": "Menu",
+  "home": "Home",
+  "copyright": "© 2000-2030, All rights reserved.",
+  "somethingWentWrongTitle": "Something went wrong",
+  "somethingWentWrongDesc": "Sorry for the inconvenience caused. <br /> We are working on it. <br /> Stay connected.",
+  "oops": "Oops!",
+  "readMore": "Read More",
+  "networkTryAgain": "Please check the network and try again.",
+  "tryAgainSometime": "Something went wrong. Please try again after some time.",
+  "pageNotFound": "Page Not Found!!!",
+  "tryAgain": "Please try again!"
+}

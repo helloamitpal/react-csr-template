@@ -54,6 +54,8 @@ To know more about create-react-app, follow the documentation.
 - Complete UI architecture
 - Centralised HTTP(S) request and response interceptor
 - Progressive web app (PWA)
+- Internationalization or localization support with English and German language
+- Used React context to implement Internationalization
 - Offline support with service worker
 - Code splitting with react-loadable
 - Redux data flow

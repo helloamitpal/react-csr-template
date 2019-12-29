@@ -1,6 +1,7 @@
 import { handle } from 'redux-pack';
 
 import * as actionTypes from './articleActionTypes';
+import translate from '../../locale';
 
 const initialState = {
   articles: [],
@@ -13,8 +14,8 @@ const failureMessage = (prevState, payload) => ({
   ...prevState,
   error:
     payload && payload.message === 'Network Error'
-      ? 'Please check the network and try again.'
-      : 'Something went wrong. Please try again after some time.'
+      ? translate('common.networkTryAgain')
+      : translate('common.tryAgainSometime')
 });
 
 const articleReducer = (state = initialState, action = '') => {

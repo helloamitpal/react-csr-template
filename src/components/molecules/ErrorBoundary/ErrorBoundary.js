@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import translate from '../../../locale';
+
 import './errorBoundary.scss';
 
 class ErrorBoundary extends React.Component {
@@ -25,14 +27,8 @@ class ErrorBoundary extends React.Component {
     if (hasError) {
       return (
         <div className="error-container">
-          <h1 className="gradient-background">Something went wrong</h1>
-          <p>
-            Sorry for the inconvenience caused.
-            <br />
-            We are working on it.
-            <br />
-            Stay connected.
-          </p>
+          <h1 className="gradient-background">{translate('common.somethingWentWrongTitle')}</h1>
+          <p>{translate('common.somethingWentWrongDesc')}</p>
         </div>
       );
     }

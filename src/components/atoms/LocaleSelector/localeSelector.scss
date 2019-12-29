@@ -1,0 +1,16 @@
+@import '../../../styles/colors.scss';
+
+.locale-selector-container {
+  font-size: 0.8em !important;
+  margin: 0 10px;
+
+  span:not(.divider) {
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    margin: 0 3px !important;
+    border-right: 1px solid $divider-border-color;
+  }
+}

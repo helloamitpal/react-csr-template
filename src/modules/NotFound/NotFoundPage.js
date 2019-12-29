@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import translate from '../../locale';
+
 const NotFoundPage = ({ staticContext = {} }) => {
   staticContext.notFound = true;
   return (
     <div className="ui container">
-      <h1>Page Not Found!!!</h1>
-      <p>Please try again!</p>
+      <h1>{translate('common.pageNotFound')}</h1>
+      <p>{translate('common.tryAgain')}</p>
     </div>
   );
 };

@@ -9,6 +9,7 @@ import * as articleActionCreator from './articleActionCreator';
 import LoadingIndicator from '../../components/atoms/LoadingIndicator';
 import Message from '../../components/atoms/Message';
 import config from '../../config';
+import translate from '../../locale';
 
 const ArticlePage = ({
   articleState: { articles, error, loading },
@@ -20,7 +21,7 @@ const ArticlePage = ({
   const category = articles[0] && articles[0].source.name;
   const head = () => (
     <Helmet key={`article-page-${Math.random()}`}>
-      <title>Article List</title>
+      <title>{translate('article.articleList')}</title>
       <meta property="og:title" content="Article list" />
       <meta
         name="description"
@@ -52,7 +53,7 @@ const ArticlePage = ({
             <span className="card-title">{article.title}</span>
           </div>
           <div className="card-action">
-            <span className="link" onClick={() => gotoArticleDetails(article)}>Read More</span>
+            <span className="link" onClick={() => gotoArticleDetails(article)}>{translate('common.readMore')}</span>
           </div>
         </div>
       </div>
@@ -69,10 +70,10 @@ const ArticlePage = ({
     <div className="article-page-container">
       {head()}
       {loading && <LoadingIndicator />}
-      {!loading && error && <Message type="error" title="Oops!" description={error} />}
+      {!loading && error && <Message type="error" title={translate('common.oops')} description={error} />}
       <div className="row">
         <div className="section">
-          <h3>{category || 'Popular Articles'}</h3>
+          <h3>{category || translate('common.popularArticle')}</h3>
         </div>
         <div className="divider" />
         <div className="section">

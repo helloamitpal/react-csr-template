@@ -1,0 +1,14 @@
+{
+  "appName": "Artikel",
+  "menu": "Speisekarte",
+  "home": "Zuhause",
+  "copyright": "© 2000-2030, Alle Rechte vorbehalten.",
+  "somethingWentWrongTitle": "Etwas ist schief gelaufen",
+  "somethingWentWrongDesc": "Sorry für die Unannehmlichkeiten. <br /> Wir arbeiten daran. <br /> In Verbindung bleiben.",
+  "oops": "Hoppla!",
+  "readMore": "Weiterlesen",
+  "networkTryAgain": "Bitte überprüfen Sie das Netzwerk und versuchen Sie es erneut.",
+  "tryAgainSometime": "Etwas ist schief gelaufen. Bitte versuchen Sie es nach einiger Zeit erneut.",
+  "pageNotFound": "Seite nicht gefunden!!!",
+  "tryAgain": "Bitte versuche es erneut!"
+}

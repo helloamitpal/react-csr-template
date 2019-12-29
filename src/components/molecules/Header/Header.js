@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+import LocaleSelector from '../../atoms/LocaleSelector';
+import translate from '../../../locale';
+
+import './header.scss';
+
+const Header = ({ onChangeLocale }) => {
   const [menuOpen, setMenuToggle] = useState(false);
 
   const toggleMenu = () => setMenuToggle(!menuOpen);
 
   return (
-    <div className="navbar-fixed">
+    <div className="header-container navbar-fixed">
       <nav className="red">
         <div className="container">
           <div className="nav-wrapper">
             <a href="/" className="brand-logo">
-              Article
+              {translate('common.appName')}
             </a>
-            <span onClick={toggleMenu} className="sidenav-trigger right">
+            <LocaleSelector className="right" onChangeLocale={onChangeLocale} />
+            <span onClick={toggleMenu} className="sidenav-trigger">
               <i className="material-icons">menu</i>
             </span>
             <div
@@ -28,46 +35,46 @@ const Header = () => {
               style={menuOpen ? { transform: 'translateX(0px)' } : null}
             >
               <li>
-                <a className="subheader">Menu</a>
+                <a className="subheader">{translate('common.menu')}</a>
               </li>
               <li>
                 <div className="divider" />
               </li>
               <li>
                 <Link to="/" className="item" onClick={toggleMenu}>
-                  Home
+                  {translate('common.home')}
                 </Link>
               </li>
               <li>
                 <Link to="/articles/techradar" className="item" onClick={toggleMenu}>
-                  Tech Radar
+                  {translate('article.techRadar')}
                 </Link>
               </li>
               <li>
                 <Link to="/articles/mashable" className="item" onClick={toggleMenu}>
-                  Mashable
+                  {translate('article.mashable')}
                 </Link>
               </li>
               <li>
                 <Link to="/articles/the-verge" className="item" onClick={toggleMenu}>
-                  The Verge
+                  {translate('article.verge')}
                 </Link>
               </li>
             </ul>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
                 <Link to="/articles/techradar" className="item">
-                  Tech Radar
+                  {translate('article.techRadar')}
                 </Link>
               </li>
               <li>
                 <Link to="/articles/mashable" className="item">
-                  Mashable
+                  {translate('article.techRadar')}
                 </Link>
               </li>
               <li>
                 <Link to="/articles/the-verge" className="item">
-                  The Verge
+                  {translate('article.verge')}
                 </Link>
               </li>
             </ul>
@@ -76,6 +83,14 @@ const Header = () => {
       </nav>
     </div>
   );
+};
+
+Header.propTypes = {
+  onChangeLocale: PropTypes.func
+};
+
+Header.defaultProps = {
+  onChangeLocale: null
 };
 
 export default Header;

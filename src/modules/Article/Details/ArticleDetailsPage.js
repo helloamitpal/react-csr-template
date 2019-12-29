@@ -2,12 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
+import translate from '../../../locale';
+
 const ArticleDetailsPage = ({ history, location: { state, pathname } }) => {
   const { title, urlToImage, description, content, url } = state;
 
   const head = () => (
     <Helmet key={`article-details-page-${Math.random()}`}>
-      <title>Article details</title>
+      <title>{translate('article.detailsTitle')}</title>
       <meta property="og:title" content="Article details" />
       <meta
         name="description"
@@ -36,7 +38,7 @@ const ArticleDetailsPage = ({ history, location: { state, pathname } }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Full Article
+          {translate('article.fullArticle')}
         </a>
       </div>
     </div>

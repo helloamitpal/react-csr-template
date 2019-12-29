@@ -6,6 +6,9 @@
   "proxy": "https://newsapi.org/v2",
   "dependencies": {
     "axios": "^0.19.0",
+    "glob": "^7.1.6",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -71,13 +74,14 @@
     }
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run locale && react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "jest -u --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'"
+    "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
+    "locale": "node mergeLocales.js"
   },
   "eslintConfig": {
     "extends": "react-app"

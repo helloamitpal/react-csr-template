@@ -5,7 +5,7 @@ const _ = require('lodash');
 
 (() => {
   const output = {};
-  const LOCALE_PATH = 'src/locale/langs/';
+  const LOCALE_PATH = 'app/locale/langs/';
   const OUTPUT_FILE_NAME = 'locales.json';
   const FULL_LOCALE_PATH = `${LOCALE_PATH}${OUTPUT_FILE_NAME}`;
 

@@ -18,6 +18,7 @@
     "jsx-a11y/click-events-have-key-events": ["off"],
     "arrow-parens": ["off"],
     "react/jsx-fragments": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
 
     "react/require-default-props": ["error"],
     "react-hooks/rules-of-hooks": "error",

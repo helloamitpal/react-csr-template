@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Helmet } from 'react-helmet';
@@ -72,13 +72,19 @@ const ArticlePage = ({
       {loading && <LoadingIndicator />}
       {!loading && error && <Message type="error" title={translate('common.oops')} description={error} />}
       <div className="row">
-        <div className="section">
-          <h3>{category || translate('common.popularArticle')}</h3>
-        </div>
-        <div className="divider" />
-        <div className="section">
-          <div className="row">{articles && renderArticles()}</div>
-        </div>
+        {
+          articles && articles.length ? (
+            <Fragment>
+              <div className="section">
+                <h3>{category || translate('article.popularArticle')}</h3>
+              </div>
+              <div className="divider" />
+              <div className="section">
+                <div className="row">{renderArticles()}</div>
+              </div>
+            </Fragment>
+          ) : null
+        }
       </div>
     </div>
   );

@@ -48,12 +48,15 @@ To know more about create-react-app, follow the documentation.
 - **Node-sass**: SASS CSS pre-processor
 - **Jest**: Testing framework and test runner for unit test cases
 - **Enzyme**: React component testing utility
+- **Webpack**: Webpack module bundler
 
 ## Features of this template
 
 - Complete UI architecture
 - Centralised HTTP(S) request and response interceptor
 - Progressive web app (PWA)
+- Webpack based module bundler
+- Production and development ready boilerplate code
 - Internationalization or localization support with English and German language
 - Used React context to implement Internationalization
 - Offline support with service worker
@@ -96,14 +99,26 @@ Find config/default.js in root folder and update API Key.
 To run on local
 
 ```sh
-$ npm start
+$ npm run start
 ```
-Default port number will be 3000 but if that not available then it will automatically take a unique port number and the application will be opened in the browser
+Default port number is 7009
 
-To change the port, create a .env in root folder and add your port number as follows.
+**NOTE**: To change the port, create a .env in root folder and add your port number as follows.
 
 ```javascript
 PORT=4566
+```
+
+or change the port number in this file: server/util/port.js
+
+**NOTE**: If any new locale texts are added, please re-execute the npm start command
+
+## Unit Testing
+
+Use the following commands to execute the test cases
+
+```sh
+$ npm run test
 ```
 
 ## Deployment
@@ -149,7 +164,7 @@ These are the steps to be followed while setting up the proxy for the Heroku dep
 If you don't need proxy setup then make a couple of changes in the template as mentioned below.
 
 - Delete static.json file from the root folder
-- Remove "proxy" property from package.json file, located in the root folder.
+- Remove "proxy" code snippet from server/index.js file.
 - Uncomment the baseURL property while creating the axios instance in /src/api/apiinterceptor.js file.
 
 ## License

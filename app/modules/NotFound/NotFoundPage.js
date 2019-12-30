@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import translate from '../../locale';
 
-const NotFoundPage = ({ staticContext = {} }) => {
-  staticContext.notFound = true;
+const NotFoundPage = () => {
   return (
     <div className="ui container">
       <h1>{translate('common.pageNotFound')}</h1>
@@ -13,14 +11,4 @@ const NotFoundPage = ({ staticContext = {} }) => {
   );
 };
 
-NotFoundPage.propTypes = {
-  staticContext: PropTypes.objectOf(PropTypes.any)
-};
-
-NotFoundPage.defaultProps = {
-  staticContext: {}
-};
-
-export default {
-  component: NotFoundPage
-};
+export default NotFoundPage;

@@ -30,7 +30,6 @@ const logger = {
         ${chalk.bold('Access URLs:')}${divider}
         Localhost: ${chalk.magenta(`http://${host}:${port}`)}
         LAN: ${chalk.magenta(`http://${ip.address()}:${port}`)}
-        SWAGGER: ${chalk.magenta(`http://${ip.address()}:${port}/api-doc`)}${divider}
         ${chalk.red(`Press ${chalk.italic('CTRL-C')} to stop`)}
     `);
   }

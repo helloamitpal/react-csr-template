@@ -68,12 +68,13 @@ To know more about create-react-app, follow the documentation.
 - Error boundary to catch unexpected UI errors
 - Modular and functional programming paradigm used
 - Common and extensible config
-- EsLint
+- EsLint for maintaining uniform coding standards
 - CSS pre-processor
 - Centralised color variables
 - Test case setup with Jest
 - Redux extension for better local debugging
 - Proxy setup to counter CORS issues if any
+- Editor config for maintaining the similar coding indentation even if various editors are used across the team
 
 ## Quick start: How to run this template
 

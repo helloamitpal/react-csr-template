@@ -81,8 +81,8 @@ First clone project and install dependencies
 
 ```sh
 $ mkdir ProjectName && cd ProjectName
-$ git clone https://github.com/amit040386/react-csr-template
-$ cd react-csr-template
+$ git clone https://github.com/amit040386/react-csr-template [YOUR APP NAME]
+$ cd [YOUR APP NAME]
 $ npm install
 ```
 

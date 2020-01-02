@@ -6,6 +6,10 @@ In client side rendering (CSR), you are completely running ReactJS on the browse
 
 [Github page](https://amit040386.github.io/react-csr-template/)
 
+It's common components are bucketed into groups of Atoms and Molecules, based loosely on Brad Frost’s [Atomic Web Design principles](https://bradfrost.com/blog/post/atomic-web-design/).
+
+Atoms are the basic building blocks of our web interfaces, while Molecules are singular pieces of functionality comprised of Atoms, and Organisms are relatively complex, distinct sections of web interfaces make up of groups of Atoms and Molecules.
+
 ## Advantages of CSR
 
 - **No Full Page Reload Required**: Client-side rendering avoids making unnecessary requests for a full page when only a portion of the page has changed. This is especially helpful in a world that’s increasingly browsing via mobile networks with high latency. It makes sure fast website rendering after the initial load.

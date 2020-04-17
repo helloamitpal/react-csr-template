@@ -172,6 +172,10 @@ If you don't need proxy setup then make a couple of changes in the template as m
 - Remove "proxy" code snippet from server/index.js file.
 - Uncomment the baseURL property while creating the axios instance in /src/api/apiinterceptor.js file.
 
+## How should I check heroku deployment logs
+
+- Open your terminal and type this: heroku logs --tail --app your_app_name
+
 ## License
 
 This project is licensed under the MIT license, Copyright (c) 2019 Amit Pal. For more information see LICENSE.md.

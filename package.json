@@ -130,7 +130,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-css-modules": "^2.1.0",
-    "jsdom": "^15.2.1",
+    "jsdom": "^16.5.0",
     "null-loader": "0.1.1",
     "plop": "2.1.0",
     "postcss-flexbugs-fixes": "^4.1.0",
